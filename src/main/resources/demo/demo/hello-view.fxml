@@ -4,21 +4,27 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="demo.demo.HelloController">
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="demo.demo.HelloController"
+            style="-fx-background-color: transparent;">
 
     <!-- Titre -->
     <top>
-        <Label text="Simulateur de Bar 🍹" style="-fx-font-size: 22; -fx-padding: 15; -fx-text-fill: #2c3e50;"/>
+        <Label text="Simulateur de Bar 🍹"
+               style="-fx-font-size: 22; -fx-padding: 15; -fx-text-fill: #2c3e50;"/>
     </top>
 
     <!-- Zone centrale : cocktails -->
     <center>
-        <ScrollPane fitToWidth="true" fitToHeight="true">
+        <ScrollPane fitToWidth="true" fitToHeight="true"
+                    style="-fx-background-color: transparent;">
             <content>
-                <TilePane hgap="30" vgap="30" alignment="center" style="-fx-padding: 20;">
+                <TilePane hgap="30" vgap="30" alignment="center"
+                          style="-fx-padding: 20; -fx-background-color: transparent;">
                     <children>
 
-                        <VBox alignment="center" spacing="10">
+                        <VBox alignment="center" spacing="10"
+                              style="-fx-background-color: transparent;">
                             <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
                                 <image><Image url="@images/Mojito.png"/></image>
                             </ImageView>
@@ -26,7 +32,8 @@
                             <Button text="Ajouter Mojito" onAction="#ajouterMojito"/>
                         </VBox>
 
-                        <VBox alignment="center" spacing="10">
+                        <VBox alignment="center" spacing="10"
+                              style="-fx-background-color: transparent;">
                             <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
                                 <image><Image url="@images/Martini.png"/></image>
                             </ImageView>
@@ -34,7 +41,8 @@
                             <Button text="Ajouter Martini" onAction="#ajouterMartini"/>
                         </VBox>
 
-                        <VBox alignment="center" spacing="10">
+                        <VBox alignment="center" spacing="10"
+                              style="-fx-background-color: transparent;">
                             <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
                                 <image><Image url="@images/Cosmopolitan.png"/></image>
                             </ImageView>
@@ -42,7 +50,8 @@
                             <Button text="Ajouter Cosmopolitan" onAction="#ajouterCosmopolitan"/>
                         </VBox>
 
-                        <VBox alignment="center" spacing="10">
+                        <VBox alignment="center" spacing="10"
+                              style="-fx-background-color: transparent;">
                             <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
                                 <image><Image url="@images/Blue Lagoon.png"/></image>
                             </ImageView>
@@ -50,7 +59,8 @@
                             <Button text="Ajouter Blue Lagoon" onAction="#ajouterBlueLagoon"/>
                         </VBox>
 
-                        <VBox alignment="center" spacing="10">
+                        <VBox alignment="center" spacing="10"
+                              style="-fx-background-color: transparent;">
                             <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
                                 <image><Image url="@images/Orangina.png"/></image>
                             </ImageView>
@@ -58,7 +68,8 @@
                             <Button text="Ajouter Orangina" onAction="#ajouterOrangina"/>
                         </VBox>
 
-                        <VBox alignment="center" spacing="10">
+                        <VBox alignment="center" spacing="10"
+                              style="-fx-background-color: transparent;">
                             <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
                                 <image><Image url="@images/Cola.png"/></image>
                             </ImageView>
@@ -66,7 +77,8 @@
                             <Button text="Ajouter Cola" onAction="#ajouterCola"/>
                         </VBox>
 
-                        <VBox alignment="center" spacing="10">
+                        <VBox alignment="center" spacing="10"
+                              style="-fx-background-color: transparent;">
                             <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
                                 <image><Image url="@images/Sprite.png"/></image>
                             </ImageView>
@@ -82,9 +94,12 @@
 
     <!-- Zone terminal réduite -->
     <bottom>
-        <VBox spacing="10" alignment="center" style="-fx-padding: 15;">
-            <TextArea fx:id="outputArea" editable="false" wrapText="true" prefHeight="120" prefWidth="500"/>
-            <HBox spacing="15" alignment="center">
+        <VBox spacing="10" alignment="center"
+              style="-fx-padding: 15; -fx-background-color: transparent;">
+            <TextArea fx:id="outputArea" editable="false" wrapText="true"
+                      prefHeight="120" prefWidth="500"
+                      style="-fx-background-color: transparent;"/>
+            <HBox spacing="15" alignment="center" style="-fx-background-color: transparent;">
                 <Button text="Afficher Stock" onAction="#afficherStock"/>
                 <Button text="Payer Commande" onAction="#payerCommande"/>
                 <Button text="Afficher Personnel" onAction="#afficherPersonnel"/>
