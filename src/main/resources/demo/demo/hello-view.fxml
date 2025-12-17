@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="demo.demo.HelloController">
+
+    <!-- Titre -->
+    <top>
+        <Label text="Simulateur de Bar 🍹" style="-fx-font-size: 22; -fx-padding: 15; -fx-text-fill: #2c3e50;"/>
+    </top>
+
+    <!-- Zone centrale : cocktails -->
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true">
+            <content>
+                <TilePane hgap="30" vgap="30" alignment="center" style="-fx-padding: 20;">
+                    <children>
+
+                        <VBox alignment="center" spacing="10">
+                            <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
+                                <image><Image url="@images/Mojito.png"/></image>
+                            </ImageView>
+                            <Label text="Mojito - 8€"/>
+                            <Button text="Ajouter Mojito" onAction="#ajouterMojito"/>
+                        </VBox>
+
+                        <VBox alignment="center" spacing="10">
+                            <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
+                                <image><Image url="@images/Martini.png"/></image>
+                            </ImageView>
+                            <Label text="Martini - 14.99€"/>
+                            <Button text="Ajouter Martini" onAction="#ajouterMartini"/>
+                        </VBox>
+
+                        <VBox alignment="center" spacing="10">
+                            <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
+                                <image><Image url="@images/Cosmopolitan.png"/></image>
+                            </ImageView>
+                            <Label text="Cosmopolitan - 12.5€"/>
+                            <Button text="Ajouter Cosmopolitan" onAction="#ajouterCosmopolitan"/>
+                        </VBox>
+
+                        <VBox alignment="center" spacing="10">
+                            <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
+                                <image><Image url="@images/Blue Lagoon.png"/></image>
+                            </ImageView>
+                            <Label text="Blue Lagoon - 10.5€"/>
+                            <Button text="Ajouter Blue Lagoon" onAction="#ajouterBlueLagoon"/>
+                        </VBox>
+
+                        <VBox alignment="center" spacing="10">
+                            <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
+                                <image><Image url="@images/Orangina.png"/></image>
+                            </ImageView>
+                            <Label text="Orangina - 1.99€"/>
+                            <Button text="Ajouter Orangina" onAction="#ajouterOrangina"/>
+                        </VBox>
+
+                        <VBox alignment="center" spacing="10">
+                            <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
+                                <image><Image url="@images/Cola.png"/></image>
+                            </ImageView>
+                            <Label text="Cola - 2.5€"/>
+                            <Button text="Ajouter Cola" onAction="#ajouterCola"/>
+                        </VBox>
+
+                        <VBox alignment="center" spacing="10">
+                            <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
+                                <image><Image url="@images/Sprite.png"/></image>
+                            </ImageView>
+                            <Label text="Sprite - 2.0€"/>
+                            <Button text="Ajouter Sprite" onAction="#ajouterSprite"/>
+                        </VBox>
+
+                    </children>
+                </TilePane>
+            </content>
+        </ScrollPane>
+    </center>
+
+    <!-- Zone terminal réduite -->
+    <bottom>
+        <VBox spacing="10" alignment="center" style="-fx-padding: 15;">
+            <TextArea fx:id="outputArea" editable="false" wrapText="true" prefHeight="120" prefWidth="500"/>
+            <HBox spacing="15" alignment="center">
+                <Button text="Afficher Stock" onAction="#afficherStock"/>
+                <Button text="Payer Commande" onAction="#payerCommande"/>
+                <Button text="Afficher Personnel" onAction="#afficherPersonnel"/>
+                <Button text="Remplir le Stock" onAction="#remplirStock"/>
+            </HBox>
+        </VBox>
+    </bottom>
+
+</BorderPane>
