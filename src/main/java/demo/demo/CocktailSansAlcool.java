@@ -13,4 +13,15 @@ public class CocktailSansAlcool extends Cocktail {
         return "Cocktail sans alcool: " + getNom() + " | Prix: " + getPrix() +
                 " € | Goût: " + gout + "\n";
     }
+
+    @Override
+    public String preparer() {
+        return "🥤 Préparation du cocktail sans alcool : " + getNom() + "\n" +
+                "- Goût : " + gout + "\n" +
+                "- Ajouter les jus / sodas\n" +
+                "- Mélanger\n" +
+                "- Ajouter des glaçons\n" +
+                "- Servir frais\n";
+    }
+
 }

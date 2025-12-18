@@ -45,9 +45,15 @@ public class HelloController {
 
     private void ajouterCocktail(Cocktail c) {
         if (commande.ajouterCocktail(c, bar.getStock())) {
-            outputArea.appendText(c.getNom() + " ajouté à la commande.\n");
+
+            // 🔽 Le barman prépare le cocktail
+            String preparation = barman.preparerCocktail(c);
+
+            outputArea.appendText("✔ " + c.getNom() + " ajouté à la commande.\n");
+            outputArea.appendText(preparation + "\n");
+
         } else {
-            outputArea.appendText("Stock épuisé pour " + c.getNom() + " !\n");
+            outputArea.appendText("❌ Stock épuisé pour " + c.getNom() + " !\n");
         }
     }
 

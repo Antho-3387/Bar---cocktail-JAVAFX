@@ -35,4 +35,10 @@ public class Cocktail {
 
     @Override
     public int hashCode() { return Objects.hash(nom); }
+
+    public String preparer() {
+        return "Préparation du cocktail : " + getNom() + "\n";
+    }
+
+
 }

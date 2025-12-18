@@ -21,9 +21,8 @@ public class Barman extends Employe {
                 " | Disponible ? " + disponibilite + "\n";
     }
 
-    // Nouvelle méthode pour préparer un cocktail
     public String preparerCocktail(Cocktail c) {
         nombreVerres++;
-        return getNom() + " prépare le cocktail: " + c.getNom() + "\n";
+        return getNom() + " prépare le cocktail :\n" + c.preparer();
     }
 }

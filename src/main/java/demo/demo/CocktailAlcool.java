@@ -15,4 +15,16 @@ public class CocktailAlcool extends Cocktail {
         return "Cocktail alcoolisé: " + getNom() + " | Prix: " + getPrix() +
                 " € | Degré: " + degreAlcool + "% | Volume: " + volume + "cl\n";
     }
+
+    @Override
+    public String preparer() {
+        return "🍸 Préparation du cocktail alcoolisé : " + getNom() + "\n" +
+                "- Mesurer " + volume + " cl\n" +
+                "- Ajouter l'alcool (" + degreAlcool + "%)\n" +
+                "- Ajouter les autres ingrédients\n" +
+                "- Mélanger\n" +
+                "- Servir\n";
+    }
+
+
 }
