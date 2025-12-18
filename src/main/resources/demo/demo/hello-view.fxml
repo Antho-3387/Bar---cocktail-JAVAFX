@@ -86,7 +86,7 @@
         <VBox spacing="10" alignment="center"
               style="-fx-padding: 15; -fx-background-color: rgba(0,0,0,0.5);">
             <TextArea fx:id="outputArea" editable="false" wrapText="true"
-                      prefHeight="120" prefWidth="500"
+                      prefHeight="160" prefWidth="500"
                       style="-fx-text-fill: white;"/>
             <HBox spacing="15" alignment="center">
                 <Button text="Afficher Stock" onAction="#afficherStock"/>

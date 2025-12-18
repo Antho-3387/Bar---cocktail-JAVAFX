@@ -2,12 +2,20 @@ package demo.demo;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Stock {
+    // Gestion des cocktails
     private Map<String, Cocktail> catalogue = new LinkedHashMap<>();
     private Map<String, Integer> quantites = new LinkedHashMap<>();
     private int capaciteMax = 20;
 
+    // Gestion des ingrédients
+    private Map<String, Ingredient> ingredients = new HashMap<>();
+
+    // --- Gestion des cocktails ---
     public void ajouter(Cocktail c, int quantite) {
         String nom = c.getNom();
         catalogue.putIfAbsent(nom, c);
@@ -45,12 +53,24 @@ public class Stock {
             int actuel = quantites.getOrDefault(nom, 0);
             if (actuel < capaciteMax) {
                 quantites.put(nom, capaciteMax);
-                sb.append("Stock de ").append(nom).append(" rempli à ").append(capaciteMax).append(" unités.\n");
+                sb.append("Stock de ").append(nom).append(" rempli à ")
+                        .append(capaciteMax).append(" unités.\n");
             }
         }
         if (sb.length() == 0) sb.append("Tous les stocks sont déjà au maximum.\n");
         return sb.toString();
     }
 
-    public Map<String, Cocktail> getCatalogue() { return catalogue; }
+    public Map<String, Cocktail> getCatalogue() {
+        return catalogue;
+    }
+
+    // --- Gestion des ingrédients ---
+    public void ajouterIngredient(Ingredient ingredient) {
+        ingredients.put(ingredient.getNom(), ingredient);
+    }
+
+    public List<Ingredient> getTousLesIngredients() {
+        return new ArrayList<>(ingredients.values());
+    }
 }
