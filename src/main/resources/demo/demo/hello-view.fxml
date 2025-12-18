@@ -8,98 +8,87 @@
             fx:controller="demo.demo.HelloController"
             style="-fx-background-color: transparent;">
 
-    <!-- Titre -->
     <top>
         <Label text="Simulateur de Bar 🍹"
-               style="-fx-font-size: 22; -fx-padding: 15; -fx-text-fill: #2c3e50;"/>
+               style="-fx-font-size: 22; -fx-padding: 15; -fx-text-fill: white; -fx-effect: dropshadow(gaussian, black, 3, 0.7, 0, 0);"/>
     </top>
 
-    <!-- Zone centrale : cocktails -->
     <center>
-        <ScrollPane fitToWidth="true" fitToHeight="true"
-                    style="-fx-background-color: transparent;">
-            <content>
-                <TilePane hgap="30" vgap="30" alignment="center"
-                          style="-fx-padding: 20; -fx-background-color: transparent;">
-                    <children>
+        <AnchorPane style="-fx-background-color: transparent;">
 
-                        <VBox alignment="center" spacing="10"
-                              style="-fx-background-color: transparent;">
-                            <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
-                                <image><Image url="@images/Mojito.png"/></image>
-                            </ImageView>
-                            <Label text="Mojito - 8€"/>
-                            <Button text="Ajouter Mojito" onAction="#ajouterMojito"/>
-                        </VBox>
+            <!-- Sprite sur étagère gauche -->
+            <VBox layoutX="150" layoutY="160" alignment="center" spacing="8">
+                <ImageView fitWidth="100" fitHeight="100" preserveRatio="true">
+                    <image><Image url="@images/Sprite.png"/></image>
+                </ImageView>
+                <Label text="Sprite - 2.0€"/>
+                <Button text="Ajouter Sprite" onAction="#ajouterSprite"/>
+            </VBox>
 
-                        <VBox alignment="center" spacing="10"
-                              style="-fx-background-color: transparent;">
-                            <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
-                                <image><Image url="@images/Martini.png"/></image>
-                            </ImageView>
-                            <Label text="Martini - 14.99€"/>
-                            <Button text="Ajouter Martini" onAction="#ajouterMartini"/>
-                        </VBox>
+            <!-- Mojito -->
+            <VBox layoutX="350" layoutY="160" alignment="center" spacing="8">
+                <ImageView fitWidth="100" fitHeight="100" preserveRatio="true">
+                    <image><Image url="@images/Mojito.png"/></image>
+                </ImageView>
+                <Label text="Mojito - 8€"/>
+                <Button text="Ajouter Mojito" onAction="#ajouterMojito"/>
+            </VBox>
 
-                        <VBox alignment="center" spacing="10"
-                              style="-fx-background-color: transparent;">
-                            <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
-                                <image><Image url="@images/Cosmopolitan.png"/></image>
-                            </ImageView>
-                            <Label text="Cosmopolitan - 12.5€"/>
-                            <Button text="Ajouter Cosmopolitan" onAction="#ajouterCosmopolitan"/>
-                        </VBox>
+            <!-- Martini -->
+            <VBox layoutX="950" layoutY="160" alignment="center" spacing="8">
+                <ImageView fitWidth="100" fitHeight="100" preserveRatio="true">
+                    <image><Image url="@images/Martini.png"/></image>
+                </ImageView>
+                <Label text="Martini - 14€"/>
+                <Button text="Ajouter Martini" onAction="#ajouterMartini"/>
+            </VBox>
 
-                        <VBox alignment="center" spacing="10"
-                              style="-fx-background-color: transparent;">
-                            <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
-                                <image><Image url="@images/Blue Lagoon.png"/></image>
-                            </ImageView>
-                            <Label text="Blue Lagoon - 10.5€"/>
-                            <Button text="Ajouter Blue Lagoon" onAction="#ajouterBlueLagoon"/>
-                        </VBox>
+            <!-- Orangina -->
+            <VBox layoutX="1110" layoutY="160" alignment="center" spacing="8">
+                <ImageView fitWidth="100" fitHeight="100" preserveRatio="true">
+                    <image><Image url="@images/Orangina.png"/></image>
+                </ImageView>
+                <Label text="Orangina - 1.0€"/>
+                <Button text="Ajouter Orangina" onAction="#ajouterOrangina"/>
+            </VBox>
 
-                        <VBox alignment="center" spacing="10"
-                              style="-fx-background-color: transparent;">
-                            <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
-                                <image><Image url="@images/Orangina.png"/></image>
-                            </ImageView>
-                            <Label text="Orangina - 1.99€"/>
-                            <Button text="Ajouter Orangina" onAction="#ajouterOrangina"/>
-                        </VBox>
+            <!-- Cola -->
+            <VBox layoutX="150" layoutY="370" alignment="center" spacing="8">
+                <ImageView fitWidth="100" fitHeight="100" preserveRatio="true">
+                    <image><Image url="@images/Cola.png"/></image>
+                </ImageView>
+                <Label text="Cola - 2.5€"/>
+                <Button text="Ajouter Cola" onAction="#ajouterCola"/>
+            </VBox>
 
-                        <VBox alignment="center" spacing="10"
-                              style="-fx-background-color: transparent;">
-                            <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
-                                <image><Image url="@images/Cola.png"/></image>
-                            </ImageView>
-                            <Label text="Cola - 2.5€"/>
-                            <Button text="Ajouter Cola" onAction="#ajouterCola"/>
-                        </VBox>
+            <!-- Blue Lagoon sur étagère bas droite -->
+            <VBox layoutX="310" layoutY="370" alignment="center" spacing="8">
+                <ImageView fitWidth="100" fitHeight="100" preserveRatio="true">
+                    <image><Image url="@images/Blue Lagoon.png"/></image>
+                </ImageView>
+                <Label text="Blue Lagoon - 10.5€"/>
+                <Button text="Ajouter Blue Lagoon" onAction="#ajouterBlueLagoon"/>
+            </VBox>
 
-                        <VBox alignment="center" spacing="10"
-                              style="-fx-background-color: transparent;">
-                            <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
-                                <image><Image url="@images/Sprite.png"/></image>
-                            </ImageView>
-                            <Label text="Sprite - 2.0€"/>
-                            <Button text="Ajouter Sprite" onAction="#ajouterSprite"/>
-                        </VBox>
+            <!-- Cosmopolitan à côté -->
+            <VBox layoutX="910" layoutY="370" alignment="center" spacing="8">
+                <ImageView fitWidth="100" fitHeight="100" preserveRatio="true">
+                    <image><Image url="@images/Cosmopolitan.png"/></image>
+                </ImageView>
+                <Label text="Cosmopolitan - 10.5€"/>
+                <Button text="Ajouter Cosmopolitan" onAction="#ajouterCosmopolitan"/>
+            </VBox>
 
-                    </children>
-                </TilePane>
-            </content>
-        </ScrollPane>
+        </AnchorPane>
     </center>
 
-    <!-- Zone terminal réduite -->
     <bottom>
         <VBox spacing="10" alignment="center"
-              style="-fx-padding: 15; -fx-background-color: transparent;">
+              style="-fx-padding: 15; -fx-background-color: rgba(0,0,0,0.5);">
             <TextArea fx:id="outputArea" editable="false" wrapText="true"
                       prefHeight="120" prefWidth="500"
-                      style="-fx-background-color: transparent;"/>
-            <HBox spacing="15" alignment="center" style="-fx-background-color: transparent;">
+                      style="-fx-text-fill: white;"/>
+            <HBox spacing="15" alignment="center">
                 <Button text="Afficher Stock" onAction="#afficherStock"/>
                 <Button text="Payer Commande" onAction="#payerCommande"/>
                 <Button text="Afficher Personnel" onAction="#afficherPersonnel"/>
