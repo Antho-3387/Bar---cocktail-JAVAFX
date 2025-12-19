@@ -9,17 +9,16 @@ public class Cocktail {
     private double prix;
     private double prixOriginal;
     private List<String> etapesPreparation;
-    private List<String> ingredientsRequis = new ArrayList<>(); // 🔹 nouveau champ
+    private List<String> ingredientsRequis = new ArrayList<>();
 
-    // 🔹 Constructeur simple (nom + prix)
+    // --- Constructeurs ---
     public Cocktail(String nom, double prix) {
         this.nom = nom;
         this.prix = prix;
         this.prixOriginal = prix;
-        this.etapesPreparation = List.of(); // liste vide par défaut
+        this.etapesPreparation = List.of(); // vide par défaut
     }
 
-    // 🔹 Constructeur avec recette (nom + prix + étapes)
     public Cocktail(String nom, double prix, List<String> etapesPreparation) {
         this.nom = nom;
         this.prix = prix;
@@ -33,25 +32,23 @@ public class Cocktail {
     public double getPrixOriginal() { return prixOriginal; }
     public void setPrix(double nouveauPrix) { this.prix = nouveauPrix; }
 
+    public List<String> getEtapesPreparation() { return etapesPreparation; }
+    public void setEtapesPreparation(List<String> etapesPreparation) {
+        this.etapesPreparation = etapesPreparation != null ? new ArrayList<>(etapesPreparation) : List.of();
+    }
+
+    public List<String> getIngredientsRequis() { return ingredientsRequis; }
+    public void setIngredientsRequis(List<String> ingredients) {
+        this.ingredientsRequis = ingredients != null ? new ArrayList<>(ingredients) : new ArrayList<>();
+    }
+
+    // --- Méthodes utilitaires ---
     public void appliquerReduction(double pourcentage) {
         this.prix = prix * (1 - pourcentage);
     }
 
     public void remettrePrixOriginal() {
         this.prix = prixOriginal;
-    }
-
-    public List<String> getEtapesPreparation() {
-        return etapesPreparation;
-    }
-
-    // 🔹 nouveaux accesseurs pour les ingrédients requis
-    public void setIngredientsRequis(List<String> ingredients) {
-        this.ingredientsRequis = ingredients;
-    }
-
-    public List<String> getIngredientsRequis() {
-        return ingredientsRequis;
     }
 
     // --- Méthodes d'affichage ---
