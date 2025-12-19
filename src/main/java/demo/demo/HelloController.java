@@ -384,6 +384,29 @@ public class HelloController {
     @FXML
     protected void remplirStock() {
         outputArea.appendText("\n=== Remplissage du stock ===\n");
-        outputArea.appendText(bar.getStock().remplirStock());
+
+        // Remplir tous les ingrédients à leur quantité maximale
+        List<Ingredient> ingredients = bar.getStock().getTousLesIngredients();
+
+        if (ingredients == null || ingredients.isEmpty()) {
+            outputArea.appendText("❌ Aucun ingrédient dans le stock\n");
+            return;
+        }
+
+        int quantiteMax = 50; // Quantité maximale par ingrédient
+
+        for (Ingredient ing : ingredients) {
+            int quantiteActuelle = ing.getQuantite();
+            int aAjouter = quantiteMax - quantiteActuelle;
+
+            if (aAjouter > 0) {
+                ing.ajouter(aAjouter);
+                outputArea.appendText("✅ " + ing.getNom() + " : " + quantiteActuelle + " → " + ing.getQuantite() + "\n");
+            } else {
+                outputArea.appendText("✓ " + ing.getNom() + " : déjà plein (" + quantiteActuelle + ")\n");
+            }
+        }
+
+        outputArea.appendText("\n🎉 Stock rempli avec succès !\n");
     }
 }

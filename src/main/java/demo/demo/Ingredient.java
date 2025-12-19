@@ -19,6 +19,10 @@ public class Ingredient {
         this.quantite = Math.max(0, quantite - qte);
     }
 
+    public void ajouter(int qte) {
+        this.quantite += qte;
+    }
+
     @Override
     public String toString() {
         return nom + " (" + quantite + " dispo)";
